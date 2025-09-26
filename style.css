@@ -58,8 +58,9 @@ body{
     background-color: rgb(13, 0, 33);
 }
 #back-top{
+    display: block;
     border-radius: 30px;
-    width: 150px;
+    width: 200px;
     text-align: center;
     margin: auto;
     background-color: beige;
@@ -81,4 +82,5 @@ footer {
 .social-media{
     height: 30px;
     margin: 0 10px 0 10px;
+
 }
