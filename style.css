@@ -1,13 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 html {
   scroll-behavior: smooth;
 }
+@media (max-width: 768px) {
+  ul li {
+    float: none;
+    text-align: center;
+  }
+}
 #title-page {
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
     text-align: center;
 }
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 ul {
-    background-color: blanchedalmond;
+    background-color: #f0db9b;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -22,31 +37,88 @@ ul li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 ul li a:hover {
   background-color: rgb(150, 138, 119);
+  text-decoration: underline;
 }
 ul li a:visited {
     color: black;
 }
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #f0db9b, #bead79, #8b7e57, #3a3422);
+  color: white;
+
+}
+
 #golshi {
-    height: 618px;
-    width: 700px;
-    border-radius: 20px;
-    margin: 0 auto 0 auto;
-    display: block;
+  height: 500px;
+  width: 1000px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+#golshi:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
 }
 .bio-intro {
-    margin: 30px 100px 30px 100px;
+    margin: 60px 100px 30px 100px;
     padding: 40px 50px 50px 50px;
     border-radius: 30px 30px 30px 30px;
-    background-color: blanchedalmond;
+    background-color: #bead79;
     color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     text-align: left;
 }
 .bio-intro p {
     margin-bottom: 1em;
+}
+details {
+  margin: 15px 0;
+  padding: 15px;
+  background: #fff8e1;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+details[open] p {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+summary {
+  font-weight: bold;
+  font-size: 1.1em;
 }
 html, body { 
     height: 100%; margin: 0; 
@@ -55,20 +127,23 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(13, 0, 33);
+    background-color: #3a3422;
 }
-#back-top{
-    display: block;
-    border-radius: 30px;
-    width: 200px;
-    text-align: center;
-    margin: auto;
-    background-color: beige;
-    color: black;
-    text-decoration: none;
+#back-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 30px;
+  padding: 15px;
+  background: #8b7e57;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-decoration: none;
 }
 #back-top:hover{
     background-color: antiquewhite;
+    text-decoration: underline;
 }
 a:visited {
     color: white;
@@ -76,11 +151,24 @@ a:visited {
 footer {
   margin: 30px 0 0 0;
   padding: 20px;
-  background-color: rgb(27, 25, 31);
+  background-color: #141108;
   text-align: center;
 }
 .social-media{
     height: 30px;
     margin: 0 10px 0 10px;
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.social-media:hover {
+  transform: scale(1.5);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);   
+}
+#copyright {
+    text-align: center;
+    color: white;
+    font-size: small;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
 }
