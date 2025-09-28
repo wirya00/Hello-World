@@ -59,5 +59,19 @@
             </div>
             <p id="copyright">Wirya 2025©</p>
         </footer>
+
+        
+    <script>
+        const backTop = document.getElementById("back-top");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+            backTop.style.display = "block";
+            } else {
+            backTop.style.display = "none";
+            }
+        });
+    </script>
+
     </body>
 </html>
